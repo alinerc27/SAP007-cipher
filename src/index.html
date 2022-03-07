@@ -2,13 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Twitter Diario Cifra de Cesar</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Olá Mundo!</h1>
-    </div>
     <script src="index.js" type="module"></script>
+
+    <nav id="emptyNav">
+    <!-– Chamei de Nav vazia pois só terá aparencia de menu não tem links -–>
+    </nav>
+    <header>
+      <div id="logo">
+      </div>  
+      <div id="root">
+        <h1>Home</h1>
+      </div>
+      <div id="seach">
+      </div>
+    </header>
+    
+    <article id="encode">
+      
+      <div class ="encodeText">
+        <!-– Na fase patinete o maxlength foi 1 para receber só uma letra -–>
+        <textarea id="textEncode" cols="70" rows="7" placeholder="what's happening?" maxlength="280"></textarea>
+        
+        <div class="encodeOffset">
+          <label for="offset">Key:</label>
+         <input type="number" id="offset" min="0">
+         </div>
+
+        <button id="encodeSend">Code and tweet</button>
+          <h2>Docinho</h2>
+          <h3>@docinhocansada</h3>
+        <textarea id="answerEncode" cols="70" rows="10"></textarea>
+      </div>
+      
+      
+
+    </article>
+    
+    <article id="description">
+      <h2>Cesar</h2>
+      <h3>@juliocesar</h3>
+      <p>
+        É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, 
+        que se apresenta no alfabeto abaixo dela um número fixo de vezes.
+
+        <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/800px-Caesar3.svg.png"
+            alt="Imagem Cifra Wikipedia"
+        />
+
+        <a
+        href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar"
+        target="_blank"
+        class="linkCesarWiki"
+        >Mais Tópicos
+      </a>
+
+      </p>
+
+    </article>
+    
+    <aside id="decode">
+      <div class ="decodeText">
+          <h1>What's written</h1>
+        <!-– Na fase patinete o maxlength foi 1 para receber só uma letra -–>
+        <textarea id="textDecode" cols="25" rows="10" maxlength="280"></textarea>
+       
+        <div class="decodeOffset">
+          <!-– Era for e id offsetDec deixei padrão offset pra não dar erro -–>
+          <label for="offset">Key:</label>
+         <input type="number" id="offset" min="0">
+         </div>
+        
+         <button id="decodeSend">Decode</button>
+        
+           <h1>Follow decoded tweet</h1>
+        
+         <textarea id="answerDecode" cols="25" rows="10"></textarea>
+      </div>
+
+    </aside>
+
   </body>
 </html>
