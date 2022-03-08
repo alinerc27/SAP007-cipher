@@ -7,6 +7,8 @@
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
+ * { margin: 0; padding: 0;}
+
  *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
     all: unset;
     display: revert;
@@ -67,7 +69,7 @@ meter {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
     overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
+ /*   -webkit-line-break: after-white-space;*/
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
@@ -76,83 +78,130 @@ meter {
 }
 
 body{
-    font-family: "SF Compact Display";
+    font-family: "Archivo";
 }
 
 h1, h2{
-    font-family: Archivo;
+    font-family: "time news roman";
     font-weight: 800;
     font-style: normal;
     color: #000;
 }
 
 h1  {
-    font-size: 31px;
+    font-size: 210%;
+    left: 5%;
+    top: 15%;
 }
 
-h2, footer, button  {
-    font-size: 20px;
+h2  {
+    font-size: 170%;
 }
 
 h3, p, textarea, footer, button {
-    font-family: "SF Compact Display";
+    font-family: "Archivo";
 }
 
-h3, a {
-    font-size: 15px; 
+h3, footer, button {
+    font-size: 130%; 
 }
 
-p, textarea {
-    font-size: 14px;
+p, textarea, label {
+    font-size: 125%;
 }
+
+/*nav {}*/
 
 footer, button { 
     color: #fff;
     background-color: #1d9bf0;
-    }
+    }   
 
  button {
  /* Auto layout */
 
 display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 15px 93px;
+padding: 10px 77px;
+left: 70%;
 
-position: static;
-width: 350px;
-height: 49px;
-left: 0px;
-top: 469px;
-
-/* Primary Blue */
 background: #1d9bf0;
 
 /*deixa os cantos arredondados*/
 border-radius: 9999px;
 
-/* Inside auto layout */
-flex: none;
 order: 2;
-align-self: stretch;
 flex-grow: 0;
-margin: 15px 0px;
+margin: 5% 20%;
  }   
 
-aside, .decodeText {
+ /*
+.description{
+align-items: center;
+}*/
+
+a {
+font:#1d9bf0;
+font-size: 120%;
+}
+
+aside {
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: right;
 padding: 0px;
 
-position: static;
-width: 350px;
-height: 390px;
-left: 0px;
-top: 64px;
+position: fixed;
+top: 0;
+width: 25%;
+height: 100%;
+left: 72%;
 
 background: #F7F9FA;
-border-radius: 16px;
+border-radius: 4%;
 font-weight: bold;
 }
+
+/*
+nav {
+    background: #1c75a1;
+    border-radius: 4%;
+    font-weight: bold;
+    width: 35%;
+    height: 80%;
+    left: 5%;
+}
+
+article {
+    background: #a11c8b;
+    border-radius: 4%;
+    font-weight: bold;
+    width: 35%;
+    height: 80%;
+    left: 20%;
+}*/
+
+section {
+position: fixed;
+top: 0;
+width: 45%;
+height: 90%;
+left: 25%;
+right: 25%;
+}
+
+#imgCifra {
+    top: 80;
+    width: 40%;
+}
+
+textarea {
+    word-break: break-all;
+}
+
+footer {
+    position: fixed;
+    top: 95%;    
+    height: 10%;
+    width: 100%;
+ }
+
