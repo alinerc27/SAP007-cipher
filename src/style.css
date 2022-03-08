@@ -1,0 +1,81 @@
+
+body{
+    font-family: "SF Compact Display";
+}
+
+h1, h2{
+    font-family: Archivo;
+    font-weight: 800;
+    font-style: normal;
+    color: #000;
+}
+
+h1  {
+    font-size: 31px;
+}
+
+h2, footer, button  {
+    font-size: 20px;
+}
+
+h3, p, textarea, footer, button {
+    font-family: "SF Compact Display";
+}
+
+h3, a {
+    font-size: 15px; 
+}
+
+p, textarea {
+    font-size: 14px;
+}
+
+footer, button { 
+    color: #fff;
+    background-color: #1d9bf0;
+    }
+
+ button {
+ /* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px 93px;
+
+position: static;
+width: 350px;
+height: 49px;
+left: 0px;
+top: 469px;
+
+/* Primary Blue */
+background: #1DA1F2;
+
+/*deixa os cantos arredondados*/
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+margin: 15px 0px;
+ }   
+
+aside {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+width: 350px;
+height: 390px;
+left: 0px;
+top: 64px;
+
+background: #F7F9FA;
+border-radius: 16px;
+}
