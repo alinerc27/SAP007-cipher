@@ -1,0 +1,218 @@
+/***
+    The new CSS reset - version 1.5.1 (last updated 1.3.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+ * { margin: 0; padding: 0;}
+
+ *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly. */
+:where([contenteditable]) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+ /*   -webkit-line-break: after-white-space;*/
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+body{
+    font-family: "Archivo";
+}
+
+h1, h2{
+    font-family: "time news roman";
+    font-weight: 800;
+    font-style: normal;
+    color: #000;
+}
+
+h1  {
+    font-size: 210%;
+    left: 5%;
+    top: 15%;
+}
+
+h2  {
+    font-size: 170%;
+}
+
+h3, p, textarea, footer, button {
+    font-family: "Archivo";
+}
+
+h3, footer, button {
+    font-size: 130%; 
+}
+
+p, textarea, label {
+    font-size: 120%;
+}
+
+a {
+    font:#1d9bf0;
+    font-size: 118%;
+    }
+
+/*nav {}*/
+
+footer, button { 
+    color: #fff;
+    background-color: #1d9bf0;
+    }   
+
+ button {
+ /* Auto layout */
+
+display: flex;
+padding: 10px 77px;
+left: 70%;
+
+background: #1d9bf0;
+
+/*deixa os cantos arredondados*/
+border-radius: 9999px;
+
+order: 2;
+flex-grow: 0;
+margin: 5% 20%;
+ }   
+
+ /*
+.description{
+align-items: center;
+}*/
+
+
+aside {
+display: flex;
+flex-direction: column;
+align-items: right;
+padding: 0px;
+
+position: fixed;
+top: 0;
+width: 25%;
+height: 100%;
+left: 72%;
+
+background: #F7F9FA;
+border-radius: 4%;
+font-weight: bold;
+}
+
+/*
+nav {
+    background: #1c75a1;
+    border-radius: 4%;
+    font-weight: bold;
+    width: 35%;
+    height: 80%;
+    left: 5%;
+}
+
+article {
+    background: #a11c8b;
+    border-radius: 4%;
+    font-weight: bold;
+    width: 35%;
+    height: 80%;
+    left: 20%;
+}*/
+
+section {
+position: fixed;
+top: 0;
+width: 45%;
+height: 90%;
+left: 25%;
+right: 25%;
+}
+
+#imgDocinho {
+    top: 80;
+    width: 20%;
+}
+
+#imgCesar {
+    top: 80;
+    width: 20%;
+}
+
+#imgCifra {
+    top: 80;
+    width: 40%;
+}
+
+textarea {
+    word-break: break-all;
+}
+
+footer {
+    position: fixed;
+    top: 95%;    
+    height: 10%;
+    width: 100%;
+ }
+

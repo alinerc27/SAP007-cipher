@@ -13,7 +13,7 @@ const cipher = {
      let encoding = string.toUpperCase().charCodeAt(i);
       
      if (encoding >= 65 && encoding <=90){         
-      encoding = ((encoding - 65 + offset) % 26) + 65;
+      encoding = (((encoding - 65) + offset) % 26) + 65;
     
     } 
     
@@ -42,10 +42,15 @@ decode: function (offset, string){
   for (let i=0; i < string.length; i++){
 
     let decoding = string.toUpperCase().charCodeAt(i);
+    let offsetNew = 26 - offset;
+    console.log(decoding);
+    
+//let offsetDec = 26 - offset;
+//let letraDecifrada = String.fromCharCode(((("C".charCodeAt() - "A".charCodeAt()) + offsetDec) % 26 ) + "A".charCodeAt());
 
       if (decoding >= 65 && decoding <= 90){
-        decoding = ((decoding - 90 - offset) % 26) + 90;
-
+        decoding = (((decoding - 65) + offsetNew) % 26) + 65;
+        console.log(decoding);
       }
       else if (decoding == 32) {
         decoding = (decoding + string.charAt(i));
